@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ThemeTable from "./components/ThemeTable";
+import { DeleteThemeDialog, ManualThemeDialog } from "./components/Dialogs";
+import CustomAlert from "./components/CustomAlert";
+
+interface Props {}
+interface State {}
+
+class App extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="App">
+              <CustomAlert />
+              <Box sx={{ flexGrow: 1 }}>
+                <Grid container direction="column">
+                  <Grid item>
+                    <DeleteThemeDialog />
+                    <ManualThemeDialog />
+                  </Grid>
+                  <Grid item>
+                    <ThemeTable />
+                  </Grid>
+                </Grid>
+              </Box>
+      </div>
+    );
+  }
 }
 
 export default App;
