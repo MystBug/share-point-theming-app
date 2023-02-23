@@ -11,11 +11,13 @@ export const soundersRaveGreen: themeType = {
       themePrimary: "#7ee23b",
       themeSecondary: "#c0d6e4",
 
+      // Accents like borders and stuff
       neutralTertiary: "#ff8c00",
       // Default #fff (in dark theme(?)) | Devider border (on all background colors)
       neutralTertiaryAlt: "#ffc0cb",
       neutralSecondary: "#f08080",
       neutralSecondaryAlt: "#9acd32",
+      // Text in sections
       neutralPrimary: "#b8860b",
       neutralPrimaryAlt: "#008b8b",
       // Hover buttons with icon and white/black text
