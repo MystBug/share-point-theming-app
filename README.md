@@ -20,7 +20,7 @@ Runs the proxy server which will connect to sharepoint. The proxy will run on [h
 
 To make queries to sharepoint you will have to log in with administrator credentials!
 
-- SharePoint URL
+- SharePoint URL (e.g.: `https://contoso.sharepoint.com`)
 - Use `User credentials (SAML/ADFS)`
 - User name: the administrator mail adress
 - Password: the administrator password

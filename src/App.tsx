@@ -18,18 +18,18 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <div className="App">
-              <CustomAlert />
-              <Box sx={{ flexGrow: 1 }}>
-                <Grid container direction="column">
-                  <Grid item>
-                    <DeleteThemeDialog />
-                    <ManualThemeDialog />
-                  </Grid>
-                  <Grid item>
-                    <ThemeTable />
-                  </Grid>
-                </Grid>
-              </Box>
+        <CustomAlert />
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container direction="column">
+            <Grid item>
+              <DeleteThemeDialog />
+              <ManualThemeDialog />
+            </Grid>
+            <Grid item>
+              <ThemeTable />
+            </Grid>
+          </Grid>
+        </Box>
       </div>
     );
   }

@@ -22,6 +22,7 @@ import { ThemeDataContext } from "../../context/themeData.context";
 import { AppStateContext } from "../../context/app.context";
 import { AlertContext } from "../../context/alert.context";
 import EditThemeDialog from "../Dialogs/EditTheme/EditTheme";
+import ViewThemeDialog from '../Dialogs/ViewTheme/ViewTheme';
 
 const ThemeTable = () => {
   const { currentThemeData, setCurrentThemeData } =
@@ -212,6 +213,11 @@ const ThemeTable = () => {
               <TableCell align="right">
                 <EditThemeDialog
                   title="Edit; change the theme"
+                  theme={row.palette}
+                  onClose={handleEdit}
+                />
+                <ViewThemeDialog
+                  title="View theme"
                   theme={row.palette}
                   onClose={handleEdit}
                 />
