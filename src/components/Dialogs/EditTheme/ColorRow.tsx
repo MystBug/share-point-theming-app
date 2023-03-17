@@ -10,7 +10,7 @@ interface Props {
 const ColorRow: React.FC<Props> = ({ color, handleBlur }) => {
   return (
     <TableRow>
-      <TableCell>
+      <TableCell style={{ display: 'flex', alignItems: 'center' }}>
         <input
           id={color[0]}
           name={color[0]}
@@ -19,8 +19,8 @@ const ColorRow: React.FC<Props> = ({ color, handleBlur }) => {
           defaultValue={color[1]}
           onBlur={(e) => handleBlur(e)}
         /> 
-        <label htmlFor={color[0]}>
-          {color[0]}
+        <label htmlFor={color[0]} style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+          {color[0]} <code>{color[1]}</code>
         </label>
       </TableCell>
     </TableRow>
